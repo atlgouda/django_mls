@@ -1,0 +1,15 @@
+{% extends "team_site/base.html" %}
+{% block content %}
+    <h1>Eastern Conference</h1>
+    <h4>Filtered by 'team.conference == 'Eastern''</h4><br />
+    {% for team in teams %}
+    {% if team.conference == 'Eastern' %}
+
+
+
+            <h3><a class="article-title" href="#">{{ team.name }}</a></h3>
+            <span class="article-content">{{ team.conference }} Conference</span>
+
+    {% endif %}
+    {% endfor %}
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends "team_site/base.html" %}
+{% block content %}
+    <h1>Big Cribs</h1>
+    <h4>Teams with more than 30,000 seates in their stadiums</h4><br />
+    {% for team in teams %}
+    {% if team.capacity >= 30000 %}
+
+
+
+            <h3><a class="article-title" href="#">{{ team.name }}</a></h3>
+            <span class="article-content">{{ team.stadium }}</span>
+            <span class="article-content">{{ team.capacity }} seats</span>
+
+    {% endif %}
+    {% endfor %}
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends "team_site/base.html" %}
+{% block content %}
+    {% for team in teams %}
+
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ team.city }}</a>
+              <small class="text-muted">{{ team.stadium }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ team.name }}</a></h2>
+            <p class="article-content">{{ team.conference }} Conference</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}

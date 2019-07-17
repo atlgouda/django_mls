@@ -1,0 +1,16 @@
+{% extends "team_site/base.html" %}
+{% block content %}
+    <h1>New Guys</h1>
+    <h4>Teams joined in last decade</h4>
+    <h5>if team.joined >= 2010 and team.joined <= 2019</h5><br />
+    {% for team in teams %}
+    {% if team.joined >= 2010 and team.joined <= 2019 %}
+
+
+
+            <h3><a class="article-title" href="#">{{ team.name }}</a></h3>
+            <span class="article-content">Joined in {{ team.joined }}</span>
+
+    {% endif %}
+    {% endfor %}
+{% endblock content %}
